@@ -34,7 +34,7 @@ public class FragmentUtils {
     }
 
     public static float getAreaOfCircle(float radius) {
-        return 22/7 * radius * radius;
+        return 22/(float)7 * radius * radius;
     }
 
     public static boolean isPalindromeNumber(int num) {
