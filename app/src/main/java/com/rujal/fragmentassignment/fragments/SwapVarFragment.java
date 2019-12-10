@@ -52,7 +52,7 @@ public class SwapVarFragment extends Fragment {
                     Integer.valueOf(etSecondNumber.getText().toString())));
 
             tvVariableA.setText("First number: " + swappedMember.getA());
-            tvVariableB.setText("First number: " + swappedMember.getB());
+            tvVariableB.setText("Second number: " + swappedMember.getB());
         } catch (NumberFormatException ex) {
             tvVariableA.setText("Please enter valid numbers");
             tvVariableB.setText("Please enter valid numbers");

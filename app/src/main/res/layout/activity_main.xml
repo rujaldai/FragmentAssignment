@@ -15,7 +15,7 @@
             android:id="@+id/btnSimpleInterest"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
-            android:text="Simple Interest" />
+            android:text="S. Interest" />
 
         <Button
             android:id="@+id/btnAreaOfCircle"
