@@ -27,7 +27,7 @@
             android:id="@+id/btnSwapVariable"
             android:layout_width="132dp"
             android:layout_height="wrap_content"
-            android:text="Swap variable" />
+            android:text="Swap" />
 
     </LinearLayout>
 

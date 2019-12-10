@@ -40,11 +40,17 @@ public class CircleAreaFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_circle_area, container, false);
 
-        etRadius = view.findViewById(R.id.etRadius);
+        bindUI(view);
 
         btnAreaOfCircle.setOnClickListener(i -> calculateAreaOfCircle());
 
         return view;
+    }
+
+    private void bindUI(View view) {
+        etRadius = view.findViewById(R.id.etRadius);
+        btnAreaOfCircle = view.findViewById(R.id.btnCalculate);
+        tvArea = view.findViewById(R.id.tvArea);
     }
 
     private void calculateAreaOfCircle() {

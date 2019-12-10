@@ -37,49 +37,72 @@ public class FragmentUtils {
         return 22/(float)7 * radius * radius;
     }
 
-    public static boolean isPalindromeNumber(int num) {
-        int remainder, sum = 0, temp;
-        temp = num;
-        while (num > 0) {
-            remainder = num % 10;  //getting remainder
-            sum = (sum * 10) + remainder;
-            num = num / 10;
-        }
-        if (temp == sum) {
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean isArmStrongNumber(int num) {
-        int c = 0, a, temp;
-        temp = num;
-        while (num > 0) {
-            a = num % 10;
-            num = num / 10;
-            c = c + (a * a * a);
-        }
-        if (temp == c) {
-            System.out.println("armstrong number");
-            return true;
-        }
-        return false;
-    }
-
-    public static boolean isAutomorphicNumber(int num) {
-        int squareNum = num * num;
-        String str_num = Integer.toString(num);
-        String square = Integer.toString(squareNum);
-
-        if(square.endsWith(str_num)) {
-            System.out.println("Automorphic Number.");
-            return true;
+    public static boolean isPalindromeNumber(String numberString) {
+        if (isValidInt(numberString)) {
+            int num = Integer.parseInt(numberString);
+            int remainder, sum = 0, temp;
+            temp = num;
+            while (num > 0) {
+                remainder = num % 10;  //getting remainder
+                sum = (sum * 10) + remainder;
+                num = num / 10;
+            }
+            if (temp == sum) {
+                return true;
+            }
         }
 
         return false;
     }
 
-    public static float getSimpleInterest(float principal, int timeInYears, float rate) {
+    public static boolean isArmStrongNumber(String numberString) {
+        if (isValidInt(numberString)) {
+            int num = Integer.parseInt(numberString);
+            int c = 0, a, temp;
+            temp = num;
+            while (num > 0) {
+                a = num % 10;
+                num = num / 10;
+                c = c + (a * a * a);
+            }
+            if (temp == c) {
+                System.out.println("armstrong number");
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static boolean isAutomorphicNumber(String numberString) {
+        if (isValidInt(numberString)) {
+            int num = Integer.parseInt(numberString);
+            int squareNum = num * num;
+            String str_num = Integer.toString(num);
+            String square = Integer.toString(squareNum);
+
+            if (square.endsWith(str_num)) {
+                System.out.println("Automorphic Number.");
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static float getSimpleInterest(float principal, float timeInYears, float rate) {
         return principal * timeInYears * rate;
+    }
+
+    public static SwapMember swapVariables(SwapMember swapMember) {
+        int a = swapMember.getA();
+        int b = swapMember.getB();
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        swapMember.setA(a);
+        swapMember.setB(b);
+
+        return swapMember;
     }
 }

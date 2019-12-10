@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.AutomorphicFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Check if a number is automorphic"
-        android:id="@+id/labelAutomorphic" />
-
     <EditText
-        android:id="@+id/etRadius"
+        android:id="@+id/etNumber"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter a number"
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/btnCalculate"
+        android:id="@+id/btnCheck"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Check automorphic" />
@@ -27,7 +22,6 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Is Automorphic: "
-        android:id="@+id/tvArea" />
+        android:id="@+id/tvIsAutomorphicNumber" />
 
-</FrameLayout>
+</LinearLayout>

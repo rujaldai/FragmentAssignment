@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".fragments.SwapVarFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+
+    <EditText
+        android:id="@+id/etFirstNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter first number (variable a)"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/etSecondNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter second number (variable b)"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btnSwap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Swap" />
+
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="swap vaar" />
+        android:layout_height="wrap_content"
+        android:text="a: "
+        android:id="@+id/tvVariableA" />
 
-</FrameLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="b: "
+        android:id="@+id/tvVariableB" />
+
+</LinearLayout>

@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
         btnArmStrong.setOnClickListener(i -> changeFragment(FragmentEnum.ARMSTRONG));
     }
 
-    private void changeFragment(FragmentEnum areaOfCircle) {
+    private void changeFragment(FragmentEnum fragmentEnum) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        switch (areaOfCircle) {
+        switch (fragmentEnum) {
             case AREA_OF_CIRCLE:
                 CircleAreaFragment circleAreaFragment = new CircleAreaFragment();
                 fragmentTransaction.replace(R.id.fragmentContainers, circleAreaFragment);
